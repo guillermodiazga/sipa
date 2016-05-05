@@ -1,0 +1,846 @@
+-- phpMyAdmin SQL Dump
+-- version 2.10.3
+-- http://www.phpmyadmin.net
+-- 
+-- Servidor: localhost
+-- Tiempo de generación: 05-06-2011 a las 01:30:40
+-- Versión del servidor: 5.0.51
+-- Versión de PHP: 5.2.6
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+-- 
+-- Base de datos: `sipa`
+-- 
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `alimento`
+-- 
+
+CREATE TABLE `alimento` (
+  `id` int(3) NOT NULL auto_increment,
+  `nombre` varchar(50) NOT NULL,
+  `descripcion` varchar(350) NOT NULL,
+  `idtalimento` varchar(2) NOT NULL,
+  `valor` decimal(6,0) NOT NULL,
+  `iva` varchar(2) NOT NULL,
+  `bitactivo` tinyint(1) NOT NULL default '1',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=47 ;
+
+-- 
+-- Volcar la base de datos para la tabla `alimento`
+-- 
+
+INSERT INTO `alimento` VALUES (1, 'Arepa de queso', 'Arepa de Queso 150 gr y Jugo caja tetra pack preferiblente de marca tutifruti o de similar calidad: 1 und x 200 ml o con Café con leche o con chocolate con leche 12 onzas.', '1', 2897, '16', 1);
+INSERT INTO `alimento` VALUES (2, 'Arepa de chocolo', 'Arepa de Chocolo 150 gr con quesito 60 gr y Jugo caja tetra pack preferiblente de marca tutifruti o de similar calidad: 1 und x 200 ml o con Café con leche  o con chocolate con leche 12 onzas.', '1', 2802, '16', 1);
+INSERT INTO `alimento` VALUES (3, 'Almojábana rellena de guayaba', 'Almojábana 50 gr (2 unidades) rellena de guallaba y Jugo caja tetra pack preferiblente de marca tutifruti o de similar calidad: 1 und x 200 ml.', '1', 3233, '16', 1);
+INSERT INTO `alimento` VALUES (4, 'Almojábana', 'Almojábana 50 gr (2 unidades) y Jugo caja tetra pack preferiblente de marca tutifruti o de similar calidad: 1 und x 200 ml.', '1', 3000, '16', 1);
+INSERT INTO `alimento` VALUES (5, 'Buñuelos', 'Buñuelos (2 unidades de 50 gr/cu)  y Jugo caja tetra pack preferiblente de marca tutifruti o de similar calidad: 1 und x 200 ml.', '1', 2500, '16', 1);
+INSERT INTO `alimento` VALUES (6, 'Croissant  de queso', 'Croissant  de Queso  120 gms y Jugo caja tetra pack preferiblente de marca tutifruti o de similar calidad: 1 und x 200 ml o con Café con leche o con chocolate con leche de 12 onzas.', '1', 2155, '16', 1);
+INSERT INTO `alimento` VALUES (7, 'Croissant de jamón y queso ', 'Croissant de Jamón y Queso  120 gms y Jugo caja tetra pack preferiblente de marca tutifruti o de similar calidad: 1 und x 200 ml o con Café con leche o chocolate 12 onzas.', '1', 2155, '16', 1);
+INSERT INTO `alimento` VALUES (8, 'Empanada Chilena', 'Empanada chilena de 130 gr y Jugo caja tetra pack preferiblente de marca tutifruti o de similar calidad: 1 und x 200 ml', '1', 3190, '16', 1);
+INSERT INTO `alimento` VALUES (9, 'Empanada hojaldrada pollo y  verduras', 'Empanada hojaldrada de 130 gr, relleno  de  pollo y  verduras,  aderezado  con  salsa y Jugo caja tetra pack preferiblente de marca tutifruti o de similar calidad: 1 und x 200ml', '1', 3190, '16', 1);
+INSERT INTO `alimento` VALUES (10, 'Empanadas típicas', 'Empanadas típicas de 50 gr (3 unidades), encurtido o salsa y Jugo caja tetra pack preferiblente de marca tutifruti o de similar calidad: 1 und x 200ml o con Café con leche  o chocolate con leche de 12 onzas.', '1', 2716, '16', 1);
+INSERT INTO `alimento` VALUES (11, 'Muffin´s', 'Muffin´s de (mora, café; chips de chocolate)  de 160 gr y Jugo caja tetra pack preferiblente de marca tutifruti o de similar calidad: 1 und x 200ml.', '1', 2931, '16', 1);
+INSERT INTO `alimento` VALUES (12, 'Palito  de  queso  masa  hojaldrada', 'Palito  de  queso  masa  hojaldrada: 1 und y Jugo caja tetra pack preferiblente de marca tutifruti o de similar calidad: 1 und x 200 ml.', '1', 1983, '16', 1);
+INSERT INTO `alimento` VALUES (13, 'Palito  de  queso con centro de guayaba hojaldrado', 'Palito  de  queso con centro de guayaba hojaldrado  y Jugo caja tetra pack preferiblente de marca tutifruti o de similar calidad: 1 und x 200 ml.', '1', 2241, '16', 1);
+INSERT INTO `alimento` VALUES (14, 'Palito de queso frito', 'Palito de queso frito: 1 und x 120 gr y Jugo caja tetra pack preferiblente de marca tutifruti o de similar calidad: 1 und x 200ml.', '1', 2198, '16', 1);
+INSERT INTO `alimento` VALUES (15, 'Pastel de arequipe en hojaldre', 'Pastel de arequipe en hojaldre: 1 und x 120 gr y Jugo caja tetra pack preferiblente de marca tutifruti o de similar calidad: 1 und x 200ml.', '1', 2155, '16', 1);
+INSERT INTO `alimento` VALUES (16, 'Pastel de guayaba y queso en hojaldre', 'Pastel de guayaba y queso en hojaldre: 1 und x 120 gr y Jugo caja tetra pack preferiblente de marca tutifruti o de similar calidad: 1 und x 200ml.', '1', 2414, '16', 1);
+INSERT INTO `alimento` VALUES (17, 'Pastel de pollo o carne con verduras en hojaldre', 'Pastel de pollo o carne con verduras en hojaldre : 1 und x 120 gr y Jugo caja tetra pack preferiblente de marca tutifruti o de similar calidad: 1 und x 200ml.', '1', 2457, '16', 1);
+INSERT INTO `alimento` VALUES (18, 'Pastel de pollo o carne en hojaldre', 'Pastel de pollo o carne en hojaldre: 1 und x 120 gr  y Jugo caja tetra pack preferiblente de marca tutifruti o de similar calidad: 1 und x 200ml.', '1', 2457, '16', 1);
+INSERT INTO `alimento` VALUES (19, 'Pastel de pollo o carne en masa frito', 'Pastel de pollo o carne en masa frito: 1 und x 120 gr, encurtido o salsa  y Jugo caja tetra pack preferiblente de marca tutifruti o de similar calidad: 1 und x 200ml.', '1', 2328, '16', 1);
+INSERT INTO `alimento` VALUES (20, 'Pastel deguayaba en hojaldre', 'Pastel deguayaba en hojaldre: 1 und x 100 gr y Jugo caja tetra pack preferiblente de marca tutifruti o de similar calidad: 1 und x 200 ml.', '1', 2112, '16', 1);
+INSERT INTO `alimento` VALUES (21, 'Pastel hawaiano', 'Pastel Hawayano: 1 und x 120 gr y Jugo caja tetra pack preferiblente de marca tutifruti o de similar calidad: 1 und x 200 ml.', '1', 2457, '16', 1);
+INSERT INTO `alimento` VALUES (22, 'Pinchos de pollo apanado', 'Pinchos de pollo apanado (1 unidad) 100 gr y Jugo caja tetra pack preferiblente de marca tutifruti o de similar calidad: 1 und x 200 ml o con Café con leche  o chocolate con leche de 12 onzas.', '1', 3319, '16', 1);
+INSERT INTO `alimento` VALUES (23, 'Pinchos de pollo apanado (Especial)', 'Pinchos de pollo apanado (1 unidad) 100 gr, papas a la francesa 50 gr, arepa y Jugo caja tetra pack preferiblente de marca tutifruti o de similar calidad: 1 und x 200 ml o con Café con leche  o chocolate con leche de 12 onzas.', '1', 4095, '16', 1);
+INSERT INTO `alimento` VALUES (24, 'Sánduche  integral  a  3  panes', 'Sánduche  integral  a  3  panes,  con  relleno de  jamón de 22 gr, en  salsa  americana,  acompañado  por  otro  piso  de  mezcla  de  quesos 30 gr,    y Jugo caja tetra pack preferiblente de marca tutifruti o de similar calidad: 1 und x 200 ml o con Café con leche  o chocolate con leche de 12 onzas.', '1', 3362, '16', 1);
+INSERT INTO `alimento` VALUES (25, 'Sanduche pan Danés', 'Sanduche Conformado por: Pan Danés : 1 und x 160 gr, Jamón de primera calidad: 1 tajada de 22 gr, Queso mozarella de primera calidad: 1 tajada x 30 gr, Sobre salsa rosada: 10 gr, verduras (tomate, cebolla, lechuga crespa y Jugo caja tetra pack preferiblente de marca tutifruti o de similar calidad: 1 und x 200 ml.', '1', 4009, '16', 1);
+INSERT INTO `alimento` VALUES (26, 'Sanduche especial pan Alemán', 'Sánduche especial  de  pan   alemán, con  doble  porción  de  jamón (44 gr), doble  porción  de  queso (60 gr), vegetales   frescos (tomate, lechugarizada), pasta  jamonada,  aderezados  con  salsa  de   ciruelas u otra a elcción y Jugo caja tetra pack preferiblente de marca tutifruti o de similar calidad: 1 und x 200 ml. ', '1', 5172, '16', 1);
+INSERT INTO `alimento` VALUES (27, 'Tortillas  de  pan  Árabe', 'Tortillas  de  pan  árabe,  rellenas  en  su  interior  con  jamón, queso, pasta  mizo , verduras, aderezadas  con  salsa   alioli y Jugo caja tetra pack preferiblente de marca tutifruti o de similar calidad: 1 und x 200 ml o con Café con leche  o chocolate con leche de 12 onzas.', '1', 5172, '16', 1);
+INSERT INTO `alimento` VALUES (28, 'Porción de torta', 'Porción de torta 100 gr (naranja, brevas, zanahoria, otras) y Jugo caja tetra pack preferiblente de marca tutifruti o de similar calidad: 1 und x 200 ml.', '1', 2155, '16', 1);
+INSERT INTO `alimento` VALUES (29, 'Salpicón 10 onzas', 'Salpicón 10 onzas,  con helado, crema chantilly y barquillo o galleta', '1', 3017, '16', 1);
+INSERT INTO `alimento` VALUES (30, 'Creps de pollo, queso y champiñones', 'Creps de pollo, queso y champiñones 150 gr, porción de frutas y croissant. y Jugo caja tetra pack preferiblente de marca tutifruti o de similar calidad: 1 und x 200 ml.', '1', 5948, '16', 1);
+INSERT INTO `alimento` VALUES (31, 'Refrigerio navideño', 'Refrigerio navideño: Natilla de 100 gr, buñuelo de 50 gr, hojuela de 20 gr ugo caja tetra pack preferiblente de marca tutifruti o de similar calidad: 1 und x 200 ml, En su empaque navideño.', '1', 3276, '16', 1);
+INSERT INTO `alimento` VALUES (32, 'Refrigerio navideño especial', 'Refrigerio navideño especial: Natilla de 80 gr, Manjar blanco de 8 gr, buñuelo de 30 gr, hojuela de 20 gr, brauny de 20 gr, 3 galletas navideñas, ugo caja tetra pack preferiblente de marca tutifruti o de similar calidad: 1 und x 200 ml presentado en empaque navideño apropidado.', '1', 4483, '16', 1);
+INSERT INTO `alimento` VALUES (33, 'Jugo caja tetra pack', 'Jugo caja tetra pack preferiblente de marca tutifruti o de similar calidad: 1 und x 200 ml.', '1', 862, '16', 1);
+INSERT INTO `alimento` VALUES (34, 'Vaso de agua', 'Vaso de agua  250 cc. Marca reconocida', '1', 750, '0', 1);
+INSERT INTO `alimento` VALUES (35, 'Botella de agua', 'Botella de agua 330 cc. De maarca reconocida ', '1', 1100, '0', 1);
+INSERT INTO `alimento` VALUES (36, 'Palitroques con jamón', 'Palitroques con jamón (20gr apx) c/u (Pasabocas)', '1', 862, '16', 1);
+INSERT INTO `alimento` VALUES (37, 'Repollas de hojaldre rellenas de frutas', 'Repollas de hojaldre rellenas de frutas  (Pasabocas)', '1', 819, '16', 1);
+INSERT INTO `alimento` VALUES (38, 'Atún servido en croute de pan integral ', 'Atún servido en croute de pan integral  (Pasabocas)', '1', 733, '16', 1);
+INSERT INTO `alimento` VALUES (39, 'Mouse de atún', 'Mouse de atún (Pasabocas)', '1', 733, '16', 1);
+INSERT INTO `alimento` VALUES (40, 'Deep de queso con almendras', 'Deep de queso con almendras (Pasabocas)', '1', 819, '16', 1);
+INSERT INTO `alimento` VALUES (41, 'Tartaleta de pollo y fruta ', 'Tartaleta de pollo y fruta  (Pasabocas)', '1', 905, '16', 1);
+INSERT INTO `alimento` VALUES (42, 'Deditos de róbalo gratinados ', 'Deditos de róbalo gratinados  (Pasabocas)', '1', 1078, '16', 1);
+INSERT INTO `alimento` VALUES (43, 'Jamó relleno de mouse de queso ', 'Jamó relleno de mouse de queso  (Pasabocas)', '1', 733, '16', 1);
+INSERT INTO `alimento` VALUES (44, 'Quibees de res en salsa picante o al gusto', 'Quibees de res en salsa picante o al gusto (Pasabocas)', '1', 819, '16', 1);
+INSERT INTO `alimento` VALUES (45, 'Salchichas ahumadas en salsa de tomate', 'Salchichas ahumadas en salsa de tomate (Pasabocas)', '1', 819, '16', 1);
+INSERT INTO `alimento` VALUES (46, 'Pinchitos de pollo y salsa agridulce', 'Pinchitos de pollo y salsa agridulce (Pasabocas)', '1', 819, '16', 1);
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `estados`
+-- 
+
+CREATE TABLE `estados` (
+  `id` int(11) NOT NULL auto_increment,
+  `estado` varchar(30) NOT NULL,
+  `bitactivo` binary(1) NOT NULL default '1',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+
+-- 
+-- Volcar la base de datos para la tabla `estados`
+-- 
+
+INSERT INTO `estados` VALUES (1, 'Borrado', 0x31);
+INSERT INTO `estados` VALUES (2, 'Pendiente', 0x31);
+INSERT INTO `estados` VALUES (3, 'Aprobado', 0x31);
+INSERT INTO `estados` VALUES (4, 'Rechazado', 0x31);
+INSERT INTO `estados` VALUES (5, 'Pagado', 0x31);
+INSERT INTO `estados` VALUES (6, '', 0x31);
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `historico_estados_ped`
+-- 
+
+CREATE TABLE `historico_estados_ped` (
+  `id` int(100) NOT NULL auto_increment,
+  `pedido` int(10) NOT NULL,
+  `newestado` int(11) NOT NULL,
+  `comentario` varchar(250) NOT NULL,
+  `log` varchar(35) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=406 ;
+
+-- 
+-- Volcar la base de datos para la tabla `historico_estados_ped`
+-- 
+
+INSERT INTO `historico_estados_ped` VALUES (1, 1, 2, 'Creado', '18/05/2011 - 15:42 user: 21486033');
+INSERT INTO `historico_estados_ped` VALUES (2, 2, 2, 'Creado', '18/05/2011 - 15:42 user: 43098599');
+INSERT INTO `historico_estados_ped` VALUES (3, 3, 2, 'Creado', '18/05/2011 - 15:42 user: 71023175');
+INSERT INTO `historico_estados_ped` VALUES (4, 4, 2, 'Creado', '18/05/2011 - 15:42 user: 1128428892');
+INSERT INTO `historico_estados_ped` VALUES (5, 5, 2, 'Creado', '18/05/2011 - 15:42 user: 1128428892');
+INSERT INTO `historico_estados_ped` VALUES (6, 6, 2, 'Creado', '18/05/2011 - 15:42 user: 43905376');
+INSERT INTO `historico_estados_ped` VALUES (7, 7, 2, 'Creado', '18/05/2011 - 15:43 user: 15433616');
+INSERT INTO `historico_estados_ped` VALUES (8, 8, 2, 'Creado', '18/05/2011 - 15:44 user: 52990503');
+INSERT INTO `historico_estados_ped` VALUES (9, 7, 2, 'Modificado', '18/05/2011 - 15:45 user: 15433616');
+INSERT INTO `historico_estados_ped` VALUES (10, 9, 2, 'Creado', '18/05/2011 - 15:45 user: 39354691');
+INSERT INTO `historico_estados_ped` VALUES (11, 10, 2, 'Creado', '18/05/2011 - 15:46 user: 79506304');
+INSERT INTO `historico_estados_ped` VALUES (12, 11, 2, 'Creado', '18/05/2011 - 15:46 user: 43072618');
+INSERT INTO `historico_estados_ped` VALUES (13, 12, 2, 'Creado', '18/05/2011 - 15:46 user: 43098599');
+INSERT INTO `historico_estados_ped` VALUES (14, 13, 2, 'Creado', '18/05/2011 - 15:46 user: 21486033');
+INSERT INTO `historico_estados_ped` VALUES (15, 14, 2, 'Creado', '18/05/2011 - 15:47 user: 52990503');
+INSERT INTO `historico_estados_ped` VALUES (16, 15, 2, 'Creado', '18/05/2011 - 15:47 user: 42880352');
+INSERT INTO `historico_estados_ped` VALUES (17, 16, 2, 'Creado', '18/05/2011 - 15:48 user: 71023175');
+INSERT INTO `historico_estados_ped` VALUES (18, 2, 2, 'Modificado', '18/05/2011 - 15:48 user: 43098599');
+INSERT INTO `historico_estados_ped` VALUES (19, 17, 2, 'Creado', '18/05/2011 - 15:49 user: 79506304');
+INSERT INTO `historico_estados_ped` VALUES (20, 18, 2, 'Creado', '18/05/2011 - 15:49 user: 52990503');
+INSERT INTO `historico_estados_ped` VALUES (21, 19, 2, 'Creado', '18/05/2011 - 15:49 user: 42880352');
+INSERT INTO `historico_estados_ped` VALUES (22, 10, 2, 'Modificado', '18/05/2011 - 15:49 user: 79506304');
+INSERT INTO `historico_estados_ped` VALUES (23, 20, 2, 'Creado', '18/05/2011 - 15:49 user: 43905376');
+INSERT INTO `historico_estados_ped` VALUES (24, 17, 2, 'Modificado', '18/05/2011 - 15:50 user: 79506304');
+INSERT INTO `historico_estados_ped` VALUES (25, 21, 2, 'Creado', '18/05/2011 - 15:50 user: 15433616');
+INSERT INTO `historico_estados_ped` VALUES (26, 1, 3, '', '18/05/2011 - 15:50 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (27, 2, 3, '', '18/05/2011 - 15:50 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (28, 6, 3, '', '18/05/2011 - 15:51 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (29, 9, 3, '', '18/05/2011 - 15:51 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (30, 11, 3, '', '18/05/2011 - 15:51 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (31, 7, 4, 'su dirección no es consistente', '18/05/2011 - 15:52 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (32, 22, 2, 'Creado', '18/05/2011 - 15:52 user: 39354691');
+INSERT INTO `historico_estados_ped` VALUES (33, 5, 3, '', '18/05/2011 - 15:52 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (34, 10, 3, '', '18/05/2011 - 15:53 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (35, 3, 3, '', '18/05/2011 - 15:53 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (36, 8, 3, '', '18/05/2011 - 15:53 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (37, 4, 3, '', '18/05/2011 - 15:53 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (38, 12, 3, '', '18/05/2011 - 15:53 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (39, 14, 3, '', '18/05/2011 - 15:53 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (40, 15, 3, '', '18/05/2011 - 15:53 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (41, 15, 2, 'Modificado', '18/05/2011 - 15:53 user: 42880352');
+INSERT INTO `historico_estados_ped` VALUES (42, 16, 3, '', '18/05/2011 - 15:53 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (43, 15, 3, '', '18/05/2011 - 15:53 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (44, 13, 3, '', '18/05/2011 - 15:53 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (45, 17, 3, '', '18/05/2011 - 15:54 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (46, 18, 3, '', '18/05/2011 - 15:54 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (47, 19, 3, '', '18/05/2011 - 15:54 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (48, 20, 3, '', '18/05/2011 - 15:54 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (49, 21, 3, '', '18/05/2011 - 15:54 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (50, 22, 3, '', '18/05/2011 - 15:54 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (51, 23, 2, 'Creado', '18/05/2011 - 16:01 user: 1128428892');
+INSERT INTO `historico_estados_ped` VALUES (52, 24, 2, 'Creado', '18/05/2011 - 16:03 user: 79506304');
+INSERT INTO `historico_estados_ped` VALUES (53, 24, 2, 'Modificado', '18/05/2011 - 16:10 user: 79506304');
+INSERT INTO `historico_estados_ped` VALUES (54, 23, 3, '', '18/05/2011 - 16:47 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (55, 25, 2, 'Creado', '18/05/2011 - 16:51 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (56, 25, 3, '', '18/05/2011 - 16:53 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (57, 24, 3, '', '18/05/2011 - 17:03 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (58, 26, 2, 'Creado', '18/05/2011 - 17:14 user: 43072618');
+INSERT INTO `historico_estados_ped` VALUES (59, 27, 2, 'Creado', '18/05/2011 - 17:25 user: 21486033');
+INSERT INTO `historico_estados_ped` VALUES (60, 11, 5, 'Creado', '19/05/2011 - 15:01 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (61, 9, 5, 'Creado', '19/05/2011 - 16:23 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (62, 28, 2, 'Creado', '20/05/2011 - 10:23 user: 21486033');
+INSERT INTO `historico_estados_ped` VALUES (63, 26, 3, '', '20/05/2011 - 11:14 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (64, 1, 3, 'Aprobado Masivamente', '20/05/2011 - 11:39 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (65, 2, 3, 'Aprobado Masivamente', '20/05/2011 - 11:39 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (66, 3, 3, 'Aprobado Masivamente', '20/05/2011 - 11:39 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (67, 4, 3, 'Aprobado Masivamente', '20/05/2011 - 11:39 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (68, 5, 3, 'Aprobado Masivamente', '20/05/2011 - 11:39 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (69, 6, 3, 'Aprobado Masivamente', '20/05/2011 - 11:39 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (70, 8, 3, 'Aprobado Masivamente', '20/05/2011 - 11:39 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (71, 10, 3, 'Aprobado Masivamente', '20/05/2011 - 11:39 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (72, 12, 3, 'Aprobado Masivamente', '20/05/2011 - 11:39 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (73, 13, 3, 'Aprobado Masivamente', '20/05/2011 - 11:39 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (74, 14, 3, 'Aprobado Masivamente', '20/05/2011 - 11:39 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (75, 15, 3, 'Aprobado Masivamente', '20/05/2011 - 11:39 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (76, 16, 3, 'Aprobado Masivamente', '20/05/2011 - 11:39 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (77, 17, 3, 'Aprobado Masivamente', '20/05/2011 - 11:39 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (78, 18, 3, 'Aprobado Masivamente', '20/05/2011 - 11:39 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (79, 19, 3, 'Aprobado Masivamente', '20/05/2011 - 11:39 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (80, 20, 3, 'Aprobado Masivamente', '20/05/2011 - 11:39 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (81, 21, 3, 'Aprobado Masivamente', '20/05/2011 - 11:39 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (82, 22, 3, 'Aprobado Masivamente', '20/05/2011 - 11:39 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (83, 23, 3, 'Aprobado Masivamente', '20/05/2011 - 11:39 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (84, 24, 3, 'Aprobado Masivamente', '20/05/2011 - 11:39 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (85, 25, 3, 'Aprobado Masivamente', '20/05/2011 - 11:39 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (86, 26, 3, 'Aprobado Masivamente', '20/05/2011 - 11:39 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (87, 27, 3, 'Aprobado Masivamente', '20/05/2011 - 11:39 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (88, 28, 3, 'Aprobado Masivamente', '20/05/2011 - 11:39 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (89, 4, 4, 'dfgsdf', '20/05/2011 - 12:12 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (90, 1, 4, 'sdfsd', '20/05/2011 - 12:13 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (91, 2, 3, '', '20/05/2011 - 12:15 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (92, 3, 3, '', '20/05/2011 - 12:16 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (93, 5, 4, 'afdfa', '20/05/2011 - 12:16 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (94, 6, 4, 'adfas', '20/05/2011 - 12:17 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (95, 8, 3, '', '20/05/2011 - 12:19 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (96, 10, 4, 'asefs', '20/05/2011 - 12:19 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (97, 12, 3, 'Aprobado Masivamente', '20/05/2011 - 12:20 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (98, 13, 3, 'Aprobado Masivamente', '20/05/2011 - 12:20 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (99, 14, 3, 'Aprobado Masivamente', '20/05/2011 - 12:20 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (100, 15, 3, 'Aprobado Masivamente', '20/05/2011 - 12:20 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (101, 16, 3, 'Aprobado Masivamente', '20/05/2011 - 12:20 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (102, 17, 3, 'Aprobado Masivamente', '20/05/2011 - 12:20 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (103, 18, 3, 'Aprobado Masivamente', '20/05/2011 - 12:20 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (104, 19, 3, 'Aprobado Masivamente', '20/05/2011 - 12:20 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (105, 20, 3, 'Aprobado Masivamente', '20/05/2011 - 12:20 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (106, 21, 3, 'Aprobado Masivamente', '20/05/2011 - 12:20 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (107, 22, 3, 'Aprobado Masivamente', '20/05/2011 - 12:20 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (108, 23, 3, 'Aprobado Masivamente', '20/05/2011 - 12:20 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (109, 24, 3, 'Aprobado Masivamente', '20/05/2011 - 12:20 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (110, 25, 3, 'Aprobado Masivamente', '20/05/2011 - 12:20 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (111, 26, 3, 'Aprobado Masivamente', '20/05/2011 - 12:20 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (112, 27, 3, 'Aprobado Masivamente', '20/05/2011 - 12:20 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (113, 28, 3, 'Aprobado Masivamente', '20/05/2011 - 12:20 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (114, 2, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (115, 3, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (116, 8, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (117, 12, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (118, 13, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (119, 14, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (120, 15, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (121, 16, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (122, 17, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (123, 18, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (124, 19, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (125, 20, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (126, 21, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (127, 22, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (128, 23, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (129, 24, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (130, 25, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (131, 26, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (132, 27, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (133, 28, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (134, 2, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (135, 3, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (136, 8, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (137, 12, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (138, 13, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (139, 14, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (140, 15, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (141, 16, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (142, 17, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (143, 18, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (144, 19, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (145, 20, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (146, 21, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (147, 22, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (148, 23, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (149, 24, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (150, 25, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (151, 26, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (152, 27, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (153, 28, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (154, 2, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (155, 3, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (156, 8, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (157, 12, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (158, 13, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (159, 14, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (160, 15, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (161, 16, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (162, 17, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (163, 18, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (164, 19, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (165, 20, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (166, 21, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (167, 22, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (168, 23, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (169, 24, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (170, 25, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (171, 26, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (172, 27, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (173, 28, 3, 'Aprobado Masivamente', '20/05/2011 - 12:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (174, 2, 3, 'Aprobado Masivamente', '20/05/2011 - 12:31 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (175, 3, 3, 'Aprobado Masivamente', '20/05/2011 - 12:31 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (176, 8, 3, 'Aprobado Masivamente', '20/05/2011 - 12:31 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (177, 12, 3, 'Aprobado Masivamente', '20/05/2011 - 12:31 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (178, 13, 3, 'Aprobado Masivamente', '20/05/2011 - 12:31 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (179, 14, 3, 'Aprobado Masivamente', '20/05/2011 - 12:31 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (180, 15, 3, 'Aprobado Masivamente', '20/05/2011 - 12:31 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (181, 16, 3, 'Aprobado Masivamente', '20/05/2011 - 12:31 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (182, 17, 3, 'Aprobado Masivamente', '20/05/2011 - 12:31 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (183, 18, 3, 'Aprobado Masivamente', '20/05/2011 - 12:31 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (184, 19, 3, 'Aprobado Masivamente', '20/05/2011 - 12:31 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (185, 20, 3, 'Aprobado Masivamente', '20/05/2011 - 12:31 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (186, 21, 3, 'Aprobado Masivamente', '20/05/2011 - 12:31 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (187, 22, 3, 'Aprobado Masivamente', '20/05/2011 - 12:31 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (188, 23, 3, 'Aprobado Masivamente', '20/05/2011 - 12:31 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (189, 24, 3, 'Aprobado Masivamente', '20/05/2011 - 12:31 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (190, 25, 3, 'Aprobado Masivamente', '20/05/2011 - 12:31 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (191, 26, 3, 'Aprobado Masivamente', '20/05/2011 - 12:31 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (192, 27, 3, 'Aprobado Masivamente', '20/05/2011 - 12:31 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (193, 28, 3, 'Aprobado Masivamente', '20/05/2011 - 12:31 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (194, 2, 3, 'Aprobado Masivamente', '20/05/2011 - 12:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (195, 3, 3, 'Aprobado Masivamente', '20/05/2011 - 12:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (196, 8, 3, 'Aprobado Masivamente', '20/05/2011 - 12:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (197, 12, 3, 'Aprobado Masivamente', '20/05/2011 - 12:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (198, 13, 3, 'Aprobado Masivamente', '20/05/2011 - 12:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (199, 14, 3, 'Aprobado Masivamente', '20/05/2011 - 12:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (200, 15, 3, 'Aprobado Masivamente', '20/05/2011 - 12:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (201, 16, 3, 'Aprobado Masivamente', '20/05/2011 - 12:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (202, 17, 3, 'Aprobado Masivamente', '20/05/2011 - 12:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (203, 18, 3, 'Aprobado Masivamente', '20/05/2011 - 12:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (204, 19, 3, 'Aprobado Masivamente', '20/05/2011 - 12:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (205, 20, 3, 'Aprobado Masivamente', '20/05/2011 - 12:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (206, 21, 3, 'Aprobado Masivamente', '20/05/2011 - 12:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (207, 22, 3, 'Aprobado Masivamente', '20/05/2011 - 12:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (208, 23, 3, 'Aprobado Masivamente', '20/05/2011 - 12:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (209, 24, 3, 'Aprobado Masivamente', '20/05/2011 - 12:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (210, 25, 3, 'Aprobado Masivamente', '20/05/2011 - 12:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (211, 26, 3, 'Aprobado Masivamente', '20/05/2011 - 12:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (212, 27, 3, 'Aprobado Masivamente', '20/05/2011 - 12:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (213, 28, 3, 'Aprobado Masivamente', '20/05/2011 - 12:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (214, 2, 3, 'Aprobado Masivamente', '20/05/2011 - 12:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (215, 3, 3, 'Aprobado Masivamente', '20/05/2011 - 12:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (216, 8, 3, 'Aprobado Masivamente', '20/05/2011 - 12:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (217, 12, 3, 'Aprobado Masivamente', '20/05/2011 - 12:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (218, 13, 3, 'Aprobado Masivamente', '20/05/2011 - 12:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (219, 14, 3, 'Aprobado Masivamente', '20/05/2011 - 12:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (220, 15, 3, 'Aprobado Masivamente', '20/05/2011 - 12:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (221, 16, 3, 'Aprobado Masivamente', '20/05/2011 - 12:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (222, 17, 3, 'Aprobado Masivamente', '20/05/2011 - 12:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (223, 18, 3, 'Aprobado Masivamente', '20/05/2011 - 12:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (224, 19, 3, 'Aprobado Masivamente', '20/05/2011 - 12:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (225, 20, 3, 'Aprobado Masivamente', '20/05/2011 - 12:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (226, 21, 3, 'Aprobado Masivamente', '20/05/2011 - 12:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (227, 22, 3, 'Aprobado Masivamente', '20/05/2011 - 12:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (228, 23, 3, 'Aprobado Masivamente', '20/05/2011 - 12:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (229, 24, 3, 'Aprobado Masivamente', '20/05/2011 - 12:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (230, 25, 3, 'Aprobado Masivamente', '20/05/2011 - 12:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (231, 26, 3, 'Aprobado Masivamente', '20/05/2011 - 12:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (232, 27, 3, 'Aprobado Masivamente', '20/05/2011 - 12:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (233, 28, 3, 'Aprobado Masivamente', '20/05/2011 - 12:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (234, 2, 3, '', '20/05/2011 - 12:33 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (235, 3, 4, 'afasdf', '20/05/2011 - 12:33 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (236, 8, 3, '', '20/05/2011 - 12:34 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (237, 12, 3, 'Aprobado Masivamente', '20/05/2011 - 12:34 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (238, 13, 3, 'Aprobado Masivamente', '20/05/2011 - 12:34 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (239, 14, 3, 'Aprobado Masivamente', '20/05/2011 - 12:34 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (240, 15, 3, 'Aprobado Masivamente', '20/05/2011 - 12:34 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (241, 16, 3, 'Aprobado Masivamente', '20/05/2011 - 12:34 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (242, 17, 3, 'Aprobado Masivamente', '20/05/2011 - 12:34 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (243, 18, 3, 'Aprobado Masivamente', '20/05/2011 - 12:34 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (244, 19, 3, 'Aprobado Masivamente', '20/05/2011 - 12:34 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (245, 20, 3, 'Aprobado Masivamente', '20/05/2011 - 12:34 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (246, 21, 3, 'Aprobado Masivamente', '20/05/2011 - 12:34 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (247, 22, 3, 'Aprobado Masivamente', '20/05/2011 - 12:34 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (248, 23, 3, 'Aprobado Masivamente', '20/05/2011 - 12:34 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (249, 24, 3, 'Aprobado Masivamente', '20/05/2011 - 12:34 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (250, 25, 3, 'Aprobado Masivamente', '20/05/2011 - 12:34 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (251, 26, 3, 'Aprobado Masivamente', '20/05/2011 - 12:34 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (252, 27, 3, 'Aprobado Masivamente', '20/05/2011 - 12:34 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (253, 28, 3, 'Aprobado Masivamente', '20/05/2011 - 12:34 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (254, 2, 3, 'Aprobado Masivamente', '20/05/2011 - 13:00 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (255, 8, 3, 'Aprobado Masivamente', '20/05/2011 - 13:00 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (256, 12, 3, 'Aprobado Masivamente', '20/05/2011 - 13:00 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (257, 13, 3, 'Aprobado Masivamente', '20/05/2011 - 13:00 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (258, 14, 3, 'Aprobado Masivamente', '20/05/2011 - 13:00 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (259, 15, 3, 'Aprobado Masivamente', '20/05/2011 - 13:00 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (260, 16, 3, 'Aprobado Masivamente', '20/05/2011 - 13:00 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (261, 17, 3, 'Aprobado Masivamente', '20/05/2011 - 13:00 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (262, 18, 3, 'Aprobado Masivamente', '20/05/2011 - 13:00 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (263, 19, 3, 'Aprobado Masivamente', '20/05/2011 - 13:00 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (264, 20, 3, 'Aprobado Masivamente', '20/05/2011 - 13:00 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (265, 21, 3, 'Aprobado Masivamente', '20/05/2011 - 13:00 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (266, 22, 3, 'Aprobado Masivamente', '20/05/2011 - 13:00 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (267, 23, 3, 'Aprobado Masivamente', '20/05/2011 - 13:00 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (268, 24, 3, 'Aprobado Masivamente', '20/05/2011 - 13:00 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (269, 25, 3, 'Aprobado Masivamente', '20/05/2011 - 13:00 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (270, 26, 3, 'Aprobado Masivamente', '20/05/2011 - 13:00 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (271, 27, 3, 'Aprobado Masivamente', '20/05/2011 - 13:00 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (272, 28, 3, 'Aprobado Masivamente', '20/05/2011 - 13:00 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (273, 2, 3, 'Aprobado Masivamente', '20/05/2011 - 13:01 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (274, 8, 3, 'Aprobado Masivamente', '20/05/2011 - 13:01 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (275, 12, 3, 'Aprobado Masivamente', '20/05/2011 - 13:01 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (276, 13, 3, 'Aprobado Masivamente', '20/05/2011 - 13:01 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (277, 14, 3, 'Aprobado Masivamente', '20/05/2011 - 13:01 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (278, 15, 3, 'Aprobado Masivamente', '20/05/2011 - 13:01 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (279, 16, 3, 'Aprobado Masivamente', '20/05/2011 - 13:01 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (280, 17, 3, 'Aprobado Masivamente', '20/05/2011 - 13:01 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (281, 18, 3, 'Aprobado Masivamente', '20/05/2011 - 13:01 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (282, 19, 3, 'Aprobado Masivamente', '20/05/2011 - 13:01 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (283, 20, 3, 'Aprobado Masivamente', '20/05/2011 - 13:01 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (284, 21, 3, 'Aprobado Masivamente', '20/05/2011 - 13:01 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (285, 22, 3, 'Aprobado Masivamente', '20/05/2011 - 13:01 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (286, 23, 3, 'Aprobado Masivamente', '20/05/2011 - 13:01 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (287, 24, 3, 'Aprobado Masivamente', '20/05/2011 - 13:01 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (288, 25, 3, 'Aprobado Masivamente', '20/05/2011 - 13:01 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (289, 26, 3, 'Aprobado Masivamente', '20/05/2011 - 13:01 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (290, 27, 3, 'Aprobado Masivamente', '20/05/2011 - 13:01 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (291, 28, 3, 'Aprobado Masivamente', '20/05/2011 - 13:01 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (292, 2, 3, 'Aprobado Masivamente', '20/05/2011 - 13:01 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (293, 8, 3, 'Aprobado Masivamente', '20/05/2011 - 13:01 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (294, 12, 3, 'Aprobado Masivamente', '20/05/2011 - 13:01 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (295, 13, 3, 'Aprobado Masivamente', '20/05/2011 - 13:01 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (296, 14, 3, 'Aprobado Masivamente', '20/05/2011 - 13:01 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (297, 15, 3, 'Aprobado Masivamente', '20/05/2011 - 13:01 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (298, 16, 3, 'Aprobado Masivamente', '20/05/2011 - 13:01 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (299, 17, 3, 'Aprobado Masivamente', '20/05/2011 - 13:01 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (300, 18, 3, 'Aprobado Masivamente', '20/05/2011 - 13:01 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (301, 19, 3, 'Aprobado Masivamente', '20/05/2011 - 13:01 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (302, 20, 3, 'Aprobado Masivamente', '20/05/2011 - 13:01 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (303, 21, 3, 'Aprobado Masivamente', '20/05/2011 - 13:01 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (304, 22, 3, 'Aprobado Masivamente', '20/05/2011 - 13:01 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (305, 23, 3, 'Aprobado Masivamente', '20/05/2011 - 13:01 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (306, 24, 3, 'Aprobado Masivamente', '20/05/2011 - 13:01 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (307, 25, 3, 'Aprobado Masivamente', '20/05/2011 - 13:01 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (308, 26, 3, 'Aprobado Masivamente', '20/05/2011 - 13:01 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (309, 27, 3, 'Aprobado Masivamente', '20/05/2011 - 13:01 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (310, 28, 3, 'Aprobado Masivamente', '20/05/2011 - 13:01 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (311, 7, 2, 'Modificado', '20/05/2011 - 22:21 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (312, 7, 2, 'Modificado', '20/05/2011 - 22:23 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (313, 2, 2, 'Modificado', '20/05/2011 - 22:23 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (314, 1, 2, 'Modificado', '20/05/2011 - 22:24 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (315, 1, 2, 'Modificado', '20/05/2011 - 22:26 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (316, 2, 2, 'Modificado', '20/05/2011 - 22:26 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (317, 2, 2, 'Modificado', '20/05/2011 - 22:26 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (318, 2, 2, 'Modificado', '20/05/2011 - 22:27 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (319, 2, 2, 'Modificado', '20/05/2011 - 22:29 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (320, 1, 2, 'Modificado', '20/05/2011 - 22:30 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (321, 23, 2, 'Modificado', '20/05/2011 - 22:30 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (322, 1, 2, 'Modificado', '20/05/2011 - 22:30 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (323, 1, 2, 'Modificado', '20/05/2011 - 22:31 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (324, 1, 2, 'Modificado', '20/05/2011 - 22:32 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (325, 1, 2, 'Modificado', '20/05/2011 - 22:33 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (326, 1, 2, 'Modificado', '20/05/2011 - 22:36 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (327, 1, 2, 'Modificado', '20/05/2011 - 22:39 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (328, 1, 2, 'Modificado', '20/05/2011 - 22:39 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (329, 1, 2, 'Modificado', '20/05/2011 - 22:42 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (330, 1, 2, 'Modificado', '20/05/2011 - 22:43 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (331, 1, 2, 'Modificado', '20/05/2011 - 22:51 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (332, 1, 2, 'Modificado', '20/05/2011 - 23:08 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (333, 7, 2, 'Modificado', '20/05/2011 - 23:10 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (334, 1, 2, 'Modificado', '20/05/2011 - 23:10 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (335, 2, 3, '', '20/05/2011 - 23:46 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (336, 8, 3, '', '23/05/2011 - 9:22 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (337, 7, 3, 'Aprobado Masivamente', '23/05/2011 - 9:40 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (338, 12, 3, 'Aprobado Masivamente', '23/05/2011 - 9:40 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (339, 13, 3, 'Aprobado Masivamente', '23/05/2011 - 9:40 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (340, 14, 3, 'Aprobado Masivamente', '23/05/2011 - 9:40 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (341, 15, 3, 'Aprobado Masivamente', '23/05/2011 - 9:40 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (342, 16, 3, 'Aprobado Masivamente', '23/05/2011 - 9:40 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (343, 17, 3, 'Aprobado Masivamente', '23/05/2011 - 9:40 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (344, 18, 3, 'Aprobado Masivamente', '23/05/2011 - 9:40 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (345, 19, 3, 'Aprobado Masivamente', '23/05/2011 - 9:40 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (346, 20, 3, 'Aprobado Masivamente', '23/05/2011 - 9:40 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (347, 21, 3, 'Aprobado Masivamente', '23/05/2011 - 9:40 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (348, 22, 3, 'Aprobado Masivamente', '23/05/2011 - 9:40 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (349, 23, 3, 'Aprobado Masivamente', '23/05/2011 - 9:40 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (350, 24, 3, 'Aprobado Masivamente', '23/05/2011 - 9:40 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (351, 25, 3, 'Aprobado Masivamente', '23/05/2011 - 9:40 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (352, 26, 3, 'Aprobado Masivamente', '23/05/2011 - 9:40 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (353, 27, 3, 'Aprobado Masivamente', '23/05/2011 - 9:40 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (354, 28, 3, 'Aprobado Masivamente', '23/05/2011 - 9:40 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (355, 2, 3, 'Aprobado Masivamente', '23/05/2011 - 10:22 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (356, 7, 3, 'Aprobado Masivamente', '23/05/2011 - 10:22 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (357, 8, 3, 'Aprobado Masivamente', '23/05/2011 - 10:22 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (358, 12, 3, 'Aprobado Masivamente', '23/05/2011 - 10:22 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (359, 13, 3, 'Aprobado Masivamente', '23/05/2011 - 10:22 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (360, 14, 3, 'Aprobado Masivamente', '23/05/2011 - 10:22 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (361, 15, 3, 'Aprobado Masivamente', '23/05/2011 - 10:22 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (362, 16, 3, 'Aprobado Masivamente', '23/05/2011 - 10:22 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (363, 17, 3, 'Aprobado Masivamente', '23/05/2011 - 10:22 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (364, 18, 3, 'Aprobado Masivamente', '23/05/2011 - 10:22 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (365, 19, 3, 'Aprobado Masivamente', '23/05/2011 - 10:22 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (366, 20, 3, 'Aprobado Masivamente', '23/05/2011 - 10:22 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (367, 21, 3, 'Aprobado Masivamente', '23/05/2011 - 10:22 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (368, 22, 3, 'Aprobado Masivamente', '23/05/2011 - 10:22 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (369, 23, 3, 'Aprobado Masivamente', '23/05/2011 - 10:22 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (370, 24, 3, 'Aprobado Masivamente', '23/05/2011 - 10:22 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (371, 25, 3, 'Aprobado Masivamente', '23/05/2011 - 10:22 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (372, 26, 3, 'Aprobado Masivamente', '23/05/2011 - 10:22 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (373, 27, 3, 'Aprobado Masivamente', '23/05/2011 - 10:22 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (374, 28, 3, 'Aprobado Masivamente', '23/05/2011 - 10:22 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (375, 2, 2, 'Modificado', '23/05/2011 - 10:29 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (376, 2, 3, 'Aprobado Masivamente', '23/05/2011 - 10:29 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (377, 7, 3, 'Aprobado Masivamente', '23/05/2011 - 10:29 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (378, 8, 3, 'Aprobado Masivamente', '23/05/2011 - 10:29 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (379, 12, 3, 'Aprobado Masivamente', '23/05/2011 - 10:29 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (380, 13, 3, 'Aprobado Masivamente', '23/05/2011 - 10:29 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (381, 14, 3, 'Aprobado Masivamente', '23/05/2011 - 10:29 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (382, 15, 3, 'Aprobado Masivamente', '23/05/2011 - 10:29 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (383, 16, 3, 'Aprobado Masivamente', '23/05/2011 - 10:29 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (384, 17, 3, 'Aprobado Masivamente', '23/05/2011 - 10:29 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (385, 18, 3, 'Aprobado Masivamente', '23/05/2011 - 10:29 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (386, 19, 3, 'Aprobado Masivamente', '23/05/2011 - 10:29 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (387, 20, 3, 'Aprobado Masivamente', '23/05/2011 - 10:29 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (388, 21, 3, 'Aprobado Masivamente', '23/05/2011 - 10:29 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (389, 22, 3, 'Aprobado Masivamente', '23/05/2011 - 10:29 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (390, 23, 3, 'Aprobado Masivamente', '23/05/2011 - 10:29 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (391, 24, 3, 'Aprobado Masivamente', '23/05/2011 - 10:29 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (392, 25, 3, 'Aprobado Masivamente', '23/05/2011 - 10:29 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (393, 26, 3, 'Aprobado Masivamente', '23/05/2011 - 10:29 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (394, 27, 3, 'Aprobado Masivamente', '23/05/2011 - 10:29 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (395, 28, 3, 'Aprobado Masivamente', '23/05/2011 - 10:29 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (396, 29, 2, 'Creado', '23/05/2011 - 10:34 user: 42679126');
+INSERT INTO `historico_estados_ped` VALUES (397, 10, 2, 'Modificado', '24/05/2011 - 16:26 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (398, 10, 2, 'Modificado', '24/05/2011 - 16:27 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (399, 10, 2, 'Modificado', '24/05/2011 - 16:33 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (400, 10, 2, 'Modificado', '24/05/2011 - 18:11 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (401, 30, 2, 'Creado', '24/05/2011 - 18:12 user: 43098599');
+INSERT INTO `historico_estados_ped` VALUES (402, 31, 2, 'Creado', '25/05/2011 - 16:00 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (403, 31, 2, 'Modificado', '25/05/2011 - 16:02 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (404, 31, 2, 'Modificado', '26/05/2011 - 11:45 user: 123');
+INSERT INTO `historico_estados_ped` VALUES (405, 31, 2, 'Modificado', '26/05/2011 - 11:46 user: 123');
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `pedido`
+-- 
+
+CREATE TABLE `pedido` (
+  `id` int(10) NOT NULL auto_increment,
+  `idsecretaria` int(10) NOT NULL,
+  `idusuario` int(10) NOT NULL,
+  `idppto` varchar(16) NOT NULL,
+  `fchreg` varchar(20) NOT NULL,
+  `fchentrega` date NOT NULL,
+  `hora` time NOT NULL,
+  `idtalimento` int(2) NOT NULL,
+  `idalimento` int(10) NOT NULL,
+  `comentario` varchar(150) default NULL,
+  `evento` varchar(50) NOT NULL,
+  `direccion` varchar(50) NOT NULL,
+  `cantidad` int(4) NOT NULL,
+  `personarecibe` varchar(35) NOT NULL,
+  `telfjorecibe` varchar(10) NOT NULL,
+  `movilrecibe` varchar(10) NOT NULL,
+  `estado` tinyint(1) NOT NULL default '0',
+  `valorpedido` decimal(20,0) NOT NULL,
+  `remision` varchar(50) NOT NULL,
+  `factura` varchar(50) NOT NULL,
+  `iplog` varchar(20) NOT NULL,
+  `bitactivo` tinyint(1) NOT NULL default '1',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=32 ;
+
+-- 
+-- Volcar la base de datos para la tabla `pedido`
+-- 
+
+INSERT INTO `pedido` VALUES (1, 220, 21486033, '70035-4700042886', '18/05/2011 - 15:42', '2011-05-18', '16:00:00', 1, 9, 'cambiar el jugo por cafe con leche', 'celebración dia de las madres comunitarios', 'parque norte ', 25, 'Dayana katerina ', '3855664', '3015400676', 2, 92510, '', '', '10.70.4.2', 0);
+INSERT INTO `pedido` VALUES (2, 219, 43098599, '80529-4700042882', '18/05/2011 - 15:42', '2011-05-24', '10:12:00', 1, 10, 'CON CHOCOLATE', 'REUNION CULTURA', 'CAM OFICINA 702', 22, 'CLAUDIA GOMEZ', '3856458', '3003012229', 2, 69312, '', '', '10.70.4.23', 1);
+INSERT INTO `pedido` VALUES (3, 216, 71023175, '80024-4700042853', '18/05/2011 - 15:42', '2011-05-18', '14:34:00', 1, 29, 'CON GALLETA', 'REUNION DE TRABAJO', 'CALLE 44 52 165  129', 20, 'FABIO GOEZ', '3857508', '3122123239', 4, 69994, '', '', '10.70.3.204', 1);
+INSERT INTO `pedido` VALUES (4, 205, 1128428892, '10000-4700042852', '18/05/2011 - 15:42', '2011-05-18', '18:34:00', 1, 29, 'Con Galleta', 'Cualquier Cosa', 'Cr 45 45 48 hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh', 17, 'Jairo ', '2154547', '3005244578', 1, 59495, '', '', '10.70.4.40', 0);
+INSERT INTO `pedido` VALUES (5, 205, 1128428892, '10000-4700042852', '18/05/2011 - 15:42', '2011-05-18', '17:34:00', 1, 22, 'Con tutifruti', 'Capacitación', 'CAM Oficina 626', 15, 'Vanessa Sierra Valencia', '3855747', '3136984186', 1, 57751, '', '', '10.70.4.31', 0);
+INSERT INTO `pedido` VALUES (6, 207, 43905376, '80498-4700042892', '18/05/2011 - 15:42', '2011-05-18', '17:00:00', 1, 36, 'adicionar jugo.', 'capacitación de personeros', 'cll 51  40 155', 30, 'milena valencia', '5147045', '3004548811', 4, 29998, '', '', '10.70.3.85', 1);
+INSERT INTO `pedido` VALUES (7, 208, 15433616, '40458-4700042902', '18/05/2011 - 15:43', '2011-05-18', '16:34:00', 1, 29, '', 'reunion POT', 'cam piso 8 oficina 830', 20, 'Irene Acosta', '3856564', 'xxxxxxx', 2, 69994, '', '', '10.70.4.17', 1);
+INSERT INTO `pedido` VALUES (8, 218, 52990503, '80299-4700042884', '18/05/2011 - 15:44', '2011-05-19', '14:43:00', 1, 14, 'Jugos de mora', 'vacunacion', 'auditorio hgm', 50, 'licinia rave', '3856406', '3165734521', 2, 127484, '', '', '10.70.3.200', 1);
+INSERT INTO `pedido` VALUES (9, 202, 39354691, '10000-4700042920', '18/05/2011 - 15:45', '2011-05-20', '10:30:00', 1, 8, '', 'reunion', 'calle 454 52 165 CAM', 30, 'Ivonne Yepes', '3857217', '3147194169', 5, 111012, 's', 's', '10.70.4.21', 1);
+INSERT INTO `pedido` VALUES (10, 205, 79506304, '80086-4700042851', '18/05/2011 - 15:46', '2011-05-20', '14:44:00', 1, 26, 'CON COCACOLA', 'INDUCCIÓN para servidores de tal parte', 'Carrera 45 numero 12-28 por el barrio El salvador', 50, 'MARIA DONELIA RESTREPO', '3856881', '3122867465', 2, 299976, '', '', '10.70.3.130', 1);
+INSERT INTO `pedido` VALUES (11, 201, 43072618, '80116-4700042924', '18/05/2011 - 15:46', '2011-05-20', '11:44:00', 1, 14, '', 'afjdfjalfja{ljf{', 'calle ', 8, 'maria victoria', '38553', 'fajf{jklfj', 5, 20397, 'dsfgdf', 'dfgdfg', '10.70.3.255', 1);
+INSERT INTO `pedido` VALUES (12, 219, 43098599, '100099-470004288', '18/05/2011 - 15:46', '2011-05-19', '14:44:00', 1, 19, '', 'SECRETARIA CULTURA', 'CAM PISO 7 OFICINA 702', 25, 'CLAUDIA GOMEZ', '3856458', '3003012229', 2, 67512, '', '', '10.70.4.23', 1);
+INSERT INTO `pedido` VALUES (13, 220, 21486033, '70035-4700042886', '18/05/2011 - 15:46', '2011-05-19', '14:30:00', 1, 25, '', 'clausura festival de las mujeres ', 'cl 49 51 84 ', 10, 'amanda soto sanchez', '3855206', '3015400676', 2, 46504, '', '', '10.70.4.2', 1);
+INSERT INTO `pedido` VALUES (14, 218, 52990503, '80299-4700042884', '18/05/2011 - 15:47', '2011-05-25', '12:46:00', 1, 25, '', 'comite tecnico', 'cam la alpujarra - oficina 425 secretaria de salud', 6, 'damaris rodas', '3855202', '3189054321', 2, 27903, '', '', '10.70.3.200', 1);
+INSERT INTO `pedido` VALUES (15, 210, 42880352, '80437-4700042867', '18/05/2011 - 15:47', '2011-05-19', '18:00:00', 1, 21, 'e\r\nENTREGAR CON COCACOLA', 'ASAMBLEAS BARRIALES', 'CID DE CAMPO VALDES', 100, 'JULIO OSPINA', '3857514', '300563586', 2, 285012, '', '', '10.70.3.187', 1);
+INSERT INTO `pedido` VALUES (16, 216, 71023175, '80024-4700042853', '18/05/2011 - 15:48', '2011-05-20', '08:26:00', 1, 25, '', 'REUNION DE TRABAJO', 'CALLE 44 52 165  129', 28, 'FABIO GOEZ', '3857508', '3122123239', 2, 130212, '', '', '10.70.3.204', 1);
+INSERT INTO `pedido` VALUES (17, 205, 79506304, '80086-4700042851', '18/05/2011 - 15:49', '2011-05-20', '14:47:00', 1, 19, 'Con chocolate', 'REUNIÓN', 'CALE 52 D No. 63 AA 29B BELLO', 10, 'DIEGO ZAPATA', '3855622', '3122867465', 2, 27005, '', '', '10.70.3.130', 1);
+INSERT INTO `pedido` VALUES (18, 218, 52990503, '80299-4700042884', '18/05/2011 - 15:49', '2011-05-26', '14:30:00', 1, 22, 'Se solicita con jugo en caja', 'Reunión con pp', 'oficina 425', 80, 'lina guzman', '3856469', '3109806574', 2, 308003, '', '', '10.70.3.200', 1);
+INSERT INTO `pedido` VALUES (19, 210, 42880352, '80178-4700042867', '18/05/2011 - 15:49', '2011-05-19', '14:48:00', 1, 11, '', 'REUNIO COMUNIDAD', 'CID INSTITUTO ', 25, 'LILIANA MARIA DUQUE HENAO', '3857514', '3015636868', 2, 84999, '', '', '10.70.3.187', 1);
+INSERT INTO `pedido` VALUES (20, 207, 43905376, '80498-4700042892', '18/05/2011 - 15:49', '2011-05-21', '07:44:00', 1, 44, 'refresco adcional, tetrapack', 'atencion emergencia', 'cl 31 102B-47', 30, 'Juan Fernando Perez', '2352187', '3004468471', 2, 28501, '', '', '10.70.3.85', 1);
+INSERT INTO `pedido` VALUES (21, 208, 15433616, '80472-4700042902', '18/05/2011 - 15:50', '2011-05-20', '15:46:00', 1, 9, '', 'reunion Prospectiva', 'calle 44 52 65 piso 3', 30, 'dora valencia', '3855824', 'xxxxxx', 2, 111012, '', '', '10.70.4.17', 1);
+INSERT INTO `pedido` VALUES (22, 202, 39354691, '10000-4700042920', '18/05/2011 - 15:52', '2011-05-19', '14:47:00', 1, 6, '', 'reunion de trabajo', 'calle 44 52 165 CAM', 20, 'andrea herrera', '3857389', '3147194169', 2, 49996, '', '', '10.70.4.21', 1);
+INSERT INTO `pedido` VALUES (23, 205, 1128428892, '10000-4700042852', '18/05/2011 - 16:01', '2011-05-19', '15:01:00', 1, 24, '', '11', '111111', 25, '11', '11', '11', 2, 97498, '', '', '10.70.4.40', 1);
+INSERT INTO `pedido` VALUES (24, 205, 79506304, '80086-4700042851', '18/05/2011 - 16:03', '2011-05-22', '15:02:00', 1, 22, '', 'REUNIÓN', 'CALE 52 D No. 63 AA 29B BELLO', 1, 'DIEGO MAYA', '3856881', '3122867465', 2, 3850, '', '', '10.70.3.130', 1);
+INSERT INTO `pedido` VALUES (25, 205, 123, '10000-4700042852', '18/05/2011 - 16:51', '2011-05-20', '15:49:00', 1, 30, 'Si es posible entregar cocacola en lugar de jugo', 'cualquier', 'callle 44 55-65 cam oficina 626', 9, 'Pepe aguilar', '3856798', '317754568', 2, 62097, '', '', '10.60.3.190', 1);
+INSERT INTO `pedido` VALUES (26, 201, 43072618, '80116-4700042924', '18/05/2011 - 17:14', '2011-05-21', '10:13:00', 1, 2, '', 'fañfhlñakhfklñ', 'fjdalñfjalkjfk', 28, 'fj{ajfkdjfk', 'fhñdafh', 'fañfjhk', 2, 91009, '', '', '10.30.3.117', 1);
+INSERT INTO `pedido` VALUES (27, 220, 21486033, '70035-4700042886', '18/05/2011 - 17:25', '2011-05-21', '12:28:00', 1, 23, 'Con jugo de mandarina', 'dia de la madre', 'secretaría de las mujeres', 650, 'amanda soto', '3855200', '3006348943', 2, 3087630, '', '', '10.30.3.21', 1);
+INSERT INTO `pedido` VALUES (28, 220, 21486033, '70035-4700042886', '20/05/2011 - 10:23', '2011-05-21', '10:00:00', 1, 9, '', 'reunion jurado mujeres talento', 'Secretaria de las mujeres', 17, 'Luz marina Martinez', '3855729', '310564894', 2, 62907, '', '', '10.30.3.170', 1);
+INSERT INTO `pedido` VALUES (29, 205, 42679126, '10000-4700042852', '23/05/2011 - 10:34', '2011-05-24', '07:33:00', 1, 1, '', 'Comite ', 'Cr 44 165 45', 4, 'Tal de quien', '21665510', '3002050906', 2, 13442, '', '', '10.60.3.146', 1);
+INSERT INTO `pedido` VALUES (30, 219, 43098599, '100099-470004288', '24/05/2011 - 18:12', '2011-05-27', '17:11:00', 1, 1, 'chocolate50', 'ddd', 'calle 57 # 22-10', 14, 'dfd', '222', '3333', 2, 47047, '', '', '10.70.4.113', 1);
+INSERT INTO `pedido` VALUES (31, 208, 123, '90020-4700042902', '25/05/2011 - 16:00', '2011-05-26', '14:58:00', 1, 26, 'Con Cocacola', 'Comite Extraordinarió 45654654654654654fd fdfdffff', 'Alpujarra Comite Extraordinarió Piso 204 4 4 5 4  ', 100, 'Jairo Albertó de Jesus Jairo Albert', '2165510  4', '3002050906', 2, 599952, '', '', '10.60.3.146', 1);
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `persona-ppto`
+-- 
+
+CREATE TABLE `persona-ppto` (
+  `id` int(4) NOT NULL auto_increment,
+  `idusuario` int(10) NOT NULL,
+  `idppto` varchar(16) NOT NULL,
+  `bitactivo` tinyint(1) NOT NULL default '1',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=35 ;
+
+-- 
+-- Volcar la base de datos para la tabla `persona-ppto`
+-- 
+
+INSERT INTO `persona-ppto` VALUES (1, 43072618, '80116-4700042924', 1);
+INSERT INTO `persona-ppto` VALUES (2, 70082450, '80106-4700042924', 1);
+INSERT INTO `persona-ppto` VALUES (3, 39354691, '10000-4700042920', 1);
+INSERT INTO `persona-ppto` VALUES (4, 42896690, '100129-470004287', 1);
+INSERT INTO `persona-ppto` VALUES (5, 42679126, '10000-4700042852', 1);
+INSERT INTO `persona-ppto` VALUES (6, 1128428892, '10000-4700042852', 1);
+INSERT INTO `persona-ppto` VALUES (7, 79506304, '80086-4700042851', 1);
+INSERT INTO `persona-ppto` VALUES (8, 43905376, '80498-4700042892', 1);
+INSERT INTO `persona-ppto` VALUES (9, 15433616, '60066-4700042902', 1);
+INSERT INTO `persona-ppto` VALUES (10, 15433616, '80472-4700042902', 1);
+INSERT INTO `persona-ppto` VALUES (11, 15433616, '90020-4700042902', 1);
+INSERT INTO `persona-ppto` VALUES (12, 15433616, '90021-4700042902', 1);
+INSERT INTO `persona-ppto` VALUES (13, 15433616, '40458-4700042902', 1);
+INSERT INTO `persona-ppto` VALUES (14, 43264928, '80096-4700042868', 1);
+INSERT INTO `persona-ppto` VALUES (15, 42880352, '80178-4700042867', 1);
+INSERT INTO `persona-ppto` VALUES (16, 42880352, '80386-4700042867', 1);
+INSERT INTO `persona-ppto` VALUES (17, 42880352, '80431-4700042867', 1);
+INSERT INTO `persona-ppto` VALUES (18, 42880352, '80434-4700042867', 1);
+INSERT INTO `persona-ppto` VALUES (19, 42880352, '80437-4700042867', 1);
+INSERT INTO `persona-ppto` VALUES (20, 42880352, '80487-4700042867', 1);
+INSERT INTO `persona-ppto` VALUES (21, 71023175, '80024-4700042853', 1);
+INSERT INTO `persona-ppto` VALUES (22, 52990503, '80119-4700042862', 1);
+INSERT INTO `persona-ppto` VALUES (23, 52990503, '80128-4700042862', 1);
+INSERT INTO `persona-ppto` VALUES (24, 52990503, '80130-4700042862', 1);
+INSERT INTO `persona-ppto` VALUES (25, 73104042, '80299-4700042884', 1);
+INSERT INTO `persona-ppto` VALUES (26, 43098599, '100099-470004288', 1);
+INSERT INTO `persona-ppto` VALUES (27, 43098599, '80149-4700042882', 1);
+INSERT INTO `persona-ppto` VALUES (28, 43098599, '80260-4700042882', 1);
+INSERT INTO `persona-ppto` VALUES (29, 43098599, '80261-4700042882', 1);
+INSERT INTO `persona-ppto` VALUES (30, 43098599, '80529-4700042882', 1);
+INSERT INTO `persona-ppto` VALUES (31, 43098599, '080067-470004288', 1);
+INSERT INTO `persona-ppto` VALUES (32, 21486033, '70035-4700042886', 1);
+INSERT INTO `persona-ppto` VALUES (33, 123, '10000-4700042852', 1);
+INSERT INTO `persona-ppto` VALUES (34, 123, '90020-4700042902', 1);
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `presupuesto`
+-- 
+
+CREATE TABLE `presupuesto` (
+  `id` varchar(16) NOT NULL,
+  `proyecto` varchar(5) NOT NULL,
+  `pedido` varchar(10) NOT NULL,
+  `nombre` varchar(50) NOT NULL,
+  `contrato` varchar(10) NOT NULL,
+  `idsecretaria` int(3) NOT NULL,
+  `valorini` decimal(11,0) NOT NULL,
+  `valorpedido` decimal(11,0) NOT NULL,
+  `valorpagado` decimal(11,0) NOT NULL,
+  `idproveedor` int(10) NOT NULL,
+  `bitactivo` tinyint(1) NOT NULL default '1',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- 
+-- Volcar la base de datos para la tabla `presupuesto`
+-- 
+
+INSERT INTO `presupuesto` VALUES ('80106-4700042924', '80106', '4700042924', 'APOYO INSTIT. AL PPTO. Y LA PLANEACIÓN P', '4600034055', 201, 3500000, 0, 0, 800027368, 1);
+INSERT INTO `presupuesto` VALUES ('80116-4700042924', '80116', '4700042924', 'FORTALECIMIENTO DE LOS PROCESOS DE ATENC', '4600034055', 201, 10500000, 111406, 958659, 800027368, 1);
+INSERT INTO `presupuesto` VALUES ('100129-470004287', '10012', '4700042872', 'MEJORAMIENTO Y CONSOL  INFOR CONT Y FRA', '4600034055', 202, 1603121, 0, 0, 800027368, 1);
+INSERT INTO `presupuesto` VALUES ('10000-4700042920', '10000', '4700042920', 'FUNCIONAMIENTO HDA', '4600034055', 202, 900000, 161008, 8050400, 800027368, 1);
+INSERT INTO `presupuesto` VALUES ('80086-4700042851', '80086', '4700042851', 'POTENCIACION TALENTO HUMANO DE CARA CIUD', '4600034055', 205, 3000000, 330831, 11167850, 800027368, 1);
+INSERT INTO `presupuesto` VALUES ('10000-4700042852', '10000', '4700042852', 'FUNCIONAMIENTO SSAA', '4600034055', 205, 2000000, 173037, 13842050, 800027368, 1);
+INSERT INTO `presupuesto` VALUES ('80498-4700042892', '80498', '4700042892', 'FORMACION DERECHOS HUMANOS, CONVIV Y PAZ', '4600034055', 207, 14000000, 58499, 2924950, 800027368, 1);
+INSERT INTO `presupuesto` VALUES ('40458-4700042902', '40458', '4700042902', 'FORTALECIMIENTO Y DESARROLLO DEL SISTEMA', '4600034055', 208, 13000000, 69994, 0, 800027368, 1);
+INSERT INTO `presupuesto` VALUES ('60066-4700042902', '60066', '4700042902', 'GESTIÓN Y DESARROLLO INSTRUM DEL POT', '4600034055', 208, 6000000, 0, 0, 800027368, 1);
+INSERT INTO `presupuesto` VALUES ('80472-4700042902', '80472', '4700042902', 'FORMALIZACIÓN DE UNIDADES PRODUCTIVAS', '4600034055', 208, 5000000, 111012, 5550600, 800027368, 1);
+INSERT INTO `presupuesto` VALUES ('90020-4700042902', '90020', '4700042902', 'PLANIFICACIÓN Y GESTION DEL ESPACIO PUBL', '4600034055', 208, 4000000, 599952, 0, 800027368, 1);
+INSERT INTO `presupuesto` VALUES ('90021-4700042902', '90021', '4700042902', 'PLANIFICACIÓN Y GESTIÓN DE LA MOVILIDAD', '4600034055', 208, 5000000, 0, 0, 800027368, 1);
+INSERT INTO `presupuesto` VALUES ('80096-4700042868', '80096', '4700042868', 'FORTAL. MASCERCA, C.GOB Y C. DESCONCENTR', '4600034055', 209, 6000000, 0, 0, 800027368, 1);
+INSERT INTO `presupuesto` VALUES ('80178-4700042867', '80178', '4700042867', 'GERENCIA Y GESTION DESARROLLO DEL CENTRO', '4600034055', 210, 9484365, 84999, 4249950, 800027368, 1);
+INSERT INTO `presupuesto` VALUES ('80386-4700042867', '80386', '4700042867', 'GERENCIA Y GESTIÓN MACROPROY. MORAVIA', '4600034055', 210, 5000000, 0, 0, 800027368, 1);
+INSERT INTO `presupuesto` VALUES ('80431-4700042867', '80431', '4700042867', 'ASISTENCIA TECNICA Y EMPRESARIAL DLLO AG', '4600034055', 210, 6363636, 0, 0, 800027368, 1);
+INSERT INTO `presupuesto` VALUES ('80434-4700042867', '80434', '4700042867', 'FOMENTO A CULTURA SOLIDARIA Y APOYO', '4600034055', 210, 5000000, 0, 0, 800027368, 1);
+INSERT INTO `presupuesto` VALUES ('80437-4700042867', '80437', '4700042867', 'DISEÑO E IMPLEMENTACION DEL PP', '4600034055', 210, 99999999, 285012, 14250600, 800027368, 1);
+INSERT INTO `presupuesto` VALUES ('80487-4700042867', '80487', '4700042867', 'GERENCIA CORREGIMENTAL', '4600034055', 210, 10000000, 0, 0, 800027368, 1);
+INSERT INTO `presupuesto` VALUES ('80024-4700042853', '80024', '4700042853', 'TRANSPARENCIA ADMINISTATIVA Y PROBIDAD', '4600034055', 216, 4000000, 200206, 10010300, 800027368, 1);
+INSERT INTO `presupuesto` VALUES ('80119-4700042862', '80119', '4700042862', 'PREVENC DE ENFERMED ASISTEN SOCIAL SALUD', '4600034055', 217, 10050000, 0, 0, 800027368, 1);
+INSERT INTO `presupuesto` VALUES ('80128-4700042862', '80128', '4700042862', 'GESTION PARA DIRECCIONAMIENTO DEL SECTOR', '4600034055', 217, 10005000, 0, 0, 800027368, 1);
+INSERT INTO `presupuesto` VALUES ('80130-4700042862', '80130', '4700042862', 'FORTALECI CAPACIDAD INSTIT DE SRIA SALUD', '4600034055', 217, 6000000, 0, 0, 800027368, 1);
+INSERT INTO `presupuesto` VALUES ('80299-4700042884', '80299', '4700042884', 'ATENCIÓN INTEGRAL DE EMERGENCIAS Y DESAS', '4600034055', 218, 14000000, 463390, 23169500, 800027368, 1);
+INSERT INTO `presupuesto` VALUES ('100099-470004288', '10009', '4700042882', 'PP11-INTEGRACIÓN PROYEC Y PROMO JUVENTUD', '4600034055', 219, 2500000, 114559, 3375600, 800027368, 1);
+INSERT INTO `presupuesto` VALUES ('80067-4700042882', '80067', '4700042882', 'PATRIMONIO CULTUR  MATERIAL E INMATERIAL', '4600034055', 219, 9000000, 0, 0, 800027368, 1);
+INSERT INTO `presupuesto` VALUES ('80149-4700042882', '80149', '4700042882', 'FORMACIÓN ARTISTICA Y CULTURAL', '4600034055', 219, 3757181, 0, 0, 800027368, 1);
+INSERT INTO `presupuesto` VALUES ('80260-4700042882', '80260', '4700042882', 'CONSOL EVENTOS CIUD COMO VITR NAL E INTE', '4600034055', 219, 20543287, 0, 0, 800027368, 1);
+INSERT INTO `presupuesto` VALUES ('80261-4700042882', '80261', '4700042882', 'EDUCACIÓN CIUD PARA MOVILID Y SEGUR VIAL', '4600034055', 219, 8000000, 0, 0, 800027368, 1);
+INSERT INTO `presupuesto` VALUES ('80529-4700042882', '80529', '4700042882', 'CLUBES JUVENILES', '4600034055', 219, 30000000, 69312, 3673536, 800027368, 1);
+INSERT INTO `presupuesto` VALUES ('70035-4700042886', '70035', '4700042886', 'TRANSVERSALIZACION DEL ENFOQUE DE GENERO', '4600034055', 220, 32500000, 3197041, 6950700, 800027368, 1);
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `proveedor`
+-- 
+
+CREATE TABLE `proveedor` (
+  `id` int(10) NOT NULL,
+  `proveedor` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `telefono` varchar(10) NOT NULL,
+  `direccion` varchar(50) NOT NULL,
+  `bitactivo` tinyint(4) NOT NULL default '1',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- 
+-- Volcar la base de datos para la tabla `proveedor`
+-- 
+
+INSERT INTO `proveedor` VALUES (800027368, 'Tia Mima S. A.', ' tiamima@une.net.co', '444 43 63', 'Cra 50C  10 sur - 8', 1);
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `rol`
+-- 
+
+CREATE TABLE `rol` (
+  `interventor` int(10) NOT NULL,
+  PRIMARY KEY  (`interventor`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- 
+-- Volcar la base de datos para la tabla `rol`
+-- 
+
+INSERT INTO `rol` VALUES (123);
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `secretaria`
+-- 
+
+CREATE TABLE `secretaria` (
+  `id` int(3) NOT NULL,
+  `secretaria` varchar(50) NOT NULL,
+  `bitactivo` tinyint(1) NOT NULL default '1',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- 
+-- Volcar la base de datos para la tabla `secretaria`
+-- 
+
+INSERT INTO `secretaria` VALUES (200, 'Alcaldía', 1);
+INSERT INTO `secretaria` VALUES (201, 'Secretaría de Gobierno', 1);
+INSERT INTO `secretaria` VALUES (202, 'Secretaría de Hacienda', 1);
+INSERT INTO `secretaria` VALUES (203, 'Secretaría de Bienestar Social', 1);
+INSERT INTO `secretaria` VALUES (204, 'Secretaría de Obas Públicas', 1);
+INSERT INTO `secretaria` VALUES (205, 'Secretaría de Servicios Administrativos', 1);
+INSERT INTO `secretaria` VALUES (206, 'Secretaría de Transp. y Tránsito', 1);
+INSERT INTO `secretaria` VALUES (207, 'Secretaría de Educación', 1);
+INSERT INTO `secretaria` VALUES (208, 'Departamento Administrativo de Planeación', 1);
+INSERT INTO `secretaria` VALUES (209, 'Secretaría de General', 1);
+INSERT INTO `secretaria` VALUES (210, 'Secretaría de Desarrollo Social', 1);
+INSERT INTO `secretaria` VALUES (213, 'Secretaría de Privada', 1);
+INSERT INTO `secretaria` VALUES (216, 'Secretaría de Evaluación y Control', 1);
+INSERT INTO `secretaria` VALUES (217, 'Secretaría de Salud', 1);
+INSERT INTO `secretaria` VALUES (218, 'Secretaría de Medio Ambiente', 1);
+INSERT INTO `secretaria` VALUES (219, 'Secretaría de Cultura Ciudadana', 1);
+INSERT INTO `secretaria` VALUES (220, 'Secretaría de las Mujeres', 1);
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `tipoalimento`
+-- 
+
+CREATE TABLE `tipoalimento` (
+  `id` int(2) NOT NULL auto_increment,
+  `talimento` varchar(50) NOT NULL,
+  `idproveedor` int(10) NOT NULL,
+  `bitactivo` tinyint(1) NOT NULL default '1',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+-- 
+-- Volcar la base de datos para la tabla `tipoalimento`
+-- 
+
+INSERT INTO `tipoalimento` VALUES (1, 'Refrigerio', 800027368, 1);
+
+-- --------------------------------------------------------
+
+-- 
+-- Estructura de tabla para la tabla `usuario`
+-- 
+
+CREATE TABLE `usuario` (
+  `id` varchar(10) NOT NULL,
+  `nombre` varchar(50) NOT NULL,
+  `password` varchar(10) NOT NULL,
+  `idsecretaria` int(3) NOT NULL,
+  `mail` varchar(40) NOT NULL,
+  `log` int(11) NOT NULL,
+  `oficina` varchar(20) NOT NULL,
+  `telefono` varchar(7) NOT NULL,
+  `movil` varchar(10) NOT NULL,
+  `fchcreacion` date NOT NULL,
+  `bitactivo` tinyint(1) NOT NULL default '1',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- 
+-- Volcar la base de datos para la tabla `usuario`
+-- 
+
+INSERT INTO `usuario` VALUES ('43072618', 'Rubiela Urrea Ramírez', '43072618', 201, 'rubiela.urrea@medellin.gov.co', 0, '318', '3855099', '3127148051', '2011-05-20', 1);
+INSERT INTO `usuario` VALUES ('70082450', 'Javier Darío Villegas Días', '70082450', 201, 'javier.villegas@medellin.gov.co', 0, '0', '0', '0', '2011-05-20', 1);
+INSERT INTO `usuario` VALUES ('39354691', 'Ivonne Lucía Yepes Peralta', '39354691', 202, 'ivonne.yepes@medellin.gov.co', 0, 'Servicios Generales', '3857217', '314 719416', '2011-05-20', 1);
+INSERT INTO `usuario` VALUES ('42896690', 'Gloria Cecilia Alzate Gómez', '42896690', 202, 'gloria.alzate@medellin.gov.co', 0, '0', '0', '0', '2011-05-20', 1);
+INSERT INTO `usuario` VALUES ('42679126', 'Bertha Oliva Duque Gómez', '42679126', 205, 'bertha.duque@medellin.gov.co', 0, '626', '0', '0', '2011-05-20', 1);
+INSERT INTO `usuario` VALUES ('79506304', 'Diego Mauricio Maya Correa', '79506304', 205, 'diego.maya@medellin.gov.co', 0, '607', '3856881', '3122867465', '2011-05-20', 1);
+INSERT INTO `usuario` VALUES ('43905376', 'Sandra Milena Guerra Valencia', '43905376', 207, 'sandra.guerra@medellin.gov.co', 0, '304', '5148372', '3113137173', '2011-05-20', 1);
+INSERT INTO `usuario` VALUES ('15433616', 'Jaime Alberto Zapata Parra', '15433616', 208, 'jaime.zapata@medellin.gov.co', 0, '308', '3855103', '3113480746', '2011-05-20', 1);
+INSERT INTO `usuario` VALUES ('43264928', 'Carolina Toro Carvalho', '43264928', 209, 'carolina.toro@medellin.gov.co', 0, '0', '0', '0', '2011-05-20', 1);
+INSERT INTO `usuario` VALUES ('42880352', 'Liliana María Duque Henao', '42880352', 210, 'liliana.duque@medellin.gov.co', 0, '404', '3857514', '3015636868', '2011-05-20', 1);
+INSERT INTO `usuario` VALUES ('71023175', 'Fabio Alfonso Goez López', '71023175', 216, 'fabio.goez@medellin.gov.co', 0, '129', '3857508', '3122123239', '2011-05-20', 1);
+INSERT INTO `usuario` VALUES ('52990503', 'Greta Lucelli romero Deluque', '52990503', 217, 'greta.romero@medellin.gov.co', 0, '425', '3855202', '3106410139', '2011-05-20', 1);
+INSERT INTO `usuario` VALUES ('73104042', 'Jaime Enrique Herrera', '73104042', 218, 'jaime.herrera@medellin.gov.co', 0, '0', '0', '0', '2011-05-20', 1);
+INSERT INTO `usuario` VALUES ('43098599', 'Claudia Beatriz Gómez Botero', '43098599', 219, 'claudiab.gomez@medellin.gov.co', 0, '702', '3856458', '300202229', '2011-05-20', 1);
+INSERT INTO `usuario` VALUES ('21486033', 'Amanda Soto Sánchez', '21486033', 220, 'amanda.soto@medellin.gov.co', 0, '321', '3855206', '3015400676', '2011-05-20', 1);
+INSERT INTO `usuario` VALUES ('1128428892', 'Vanessa Sierra Valencia', '1128428892', 205, 'vanessa.sierra@medellin.gov.co', 0, '626', '3855747', '3136984136', '2011-05-20', 1);
+INSERT INTO `usuario` VALUES ('123', 'Administrador de Prueba', '123', 205, 'jairoa.henao@medellin.gov.co', 0, '626', '3856798', '3117720623', '0000-00-00', 1);

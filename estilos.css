@@ -1,0 +1,199 @@
+/* Estilo para el documento */
+BODY {font-family:Verdana,sans-serif;
+	font-size:large;
+	background-color: ;
+	margin-left:0.25in;
+ 	margin-right:0.25in;
+ }
+
+/* Estilo para la cabecera de nivel 2 */
+H2 {font-family:Verdana,sans-serif; font-size:19pt;color:#ffffff}
+
+/* Estilos para otras etiquetas */
+B, TD {
+	font-family:Verdana,sans-serif;
+	font-size:small;
+	color:;
+}
+
+/*Cabeza de las tablas*/
+TH {font-family:Verdana,sans-serif;font-size:small;
+color:white;background-color:#9D0000	}
+
+//
+PRE, TT, CODE {font-family:Verdana,sans-serif;
+font-size:9pt;color:}
+
+/* Estilos para otras etiquetas */
+
+TABLE{
+	font-family:Verdana,sans-serif;
+	font-size:small; 
+	background-color:#eeeeee;
+}
+
+
+input,select{
+	font-size:small; 
+
+}
+.dvDisplay{
+	background-color:#ffffff;
+	z-index: 1050;
+	position: fixed;
+	width:90%;
+	height:90%;
+	left: 10;
+	top:10;
+	background-opacity:0.4;
+	display: none;
+	overflow-y:hidden;
+	overflow-x:hidden;
+	}
+.dvStopUser{
+	background-color:#000000;
+	display: block;
+	z-index: 1000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width:100%;
+	height:100%;
+	opacity:0.4;
+	display: none;
+	filter:alpha(opacity=40);
+	/* For IE8 and earlier */}
+
+.alignRight{
+		float:right;
+	}
+.alignLeft{
+	float:left;
+	padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+div.fixedHeaderTable {
+	position: relative;
+}
+
+div.fixedHeaderTable tbody {
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+div.fixedHeaderTable thead td,div.fixedHeaderTable thead th {
+	position: relative;
+}
+
+/* IE7 hacks */
+div.fixedHeaderTable {
+	*position: relative;
+	*height: expression(this.offsetParent.clientHeight-2);
+	*overflow: auto;
+	*overflow-y: auto;
+	*overflow-x: auto;
+	*padding-right: 16px;
+}
+
+div.fixedHeaderTable thead tr {
+	*position: relative;
+	_position: absolute;
+	*top: expression(this.offsetParent.scrollTop-2);
+}
+
+div.fixedHeaderTable tbody {
+	*height: auto;
+	*position: absolute;
+	*top: 50px;
+}
+
+/* IE6 hacks */
+div.fixedHeaderTable {
+	_width: expression(this.offsetParent.clientWidth-5);
+	_overflow: auto;
+	_overflow-y: auto;
+	_overflow-x: auto;
+}
+
+div.fixedHeaderTable thead tr {
+	_position: relative
+}
+
+.csDivflotante{
+	z-index:900;
+	OVERFLOW: auto;
+	POSITION: absolute;
+	top: 80px;
+}
+
+.csTituloSuperior{
+	font-size: 55px;
+	font-weight: bold;
+	color: #4AB646;
+	background-color: #ffffff;
+	opacity: 0.7;
+	padding: 10px;
+}
+.csDvUsuario{
+	background-color: #ffffff;
+	opacity: 0.7;
+}
+
+#dvMsg{
+	font-size: 20px;
+	font-weight: bold;
+	color: #E03F21;
+	background-color: #ffffff;
+	opacity: 0.95;
+	padding: 0px 15px 15px 15px;
+	z-index:800;
+	position: absolute;
+	OVERFLOW: auto;
+	top: 200px;
+	left:-100px;
+	border-color:#95B8E7;
+	border-radius:5px 5px 5px 5px;
+	border-width:2px;
+	border-style:solid;
+	display: none;
+	width: 300px;
+	text-align: center;
+}
+#dvMsgTitle{
+	background-color: #95B8E7;
+	color: #0E2D5F;
+}
+#dvMsgText{
+	color:#575757;
+	font-size: 15px;
+	padding: 10px;
+	text-align: justify;
+}
+
+#dvFoto{
+	top: 250px;
+	left:10px;
+	z-index:200;
+	OVERFLOW: auto;
+	POSITION: absolute;
+}
+
+#granDiv{
+	visibility:visible;
+}
+
+#cargando{
+	visibility:visible;
+}
+
