@@ -71,6 +71,7 @@ echo"<script>location.href = 'index.php';</script>";
 </table>
 <? 
 }
+$vbuscado = $_GET["vbuscado"];
 if ($vbuscado!='') {
 
 include "conexion.php";

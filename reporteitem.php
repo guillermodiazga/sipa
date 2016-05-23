@@ -3,6 +3,10 @@ session_start();
 if (isset($_SESSION['sipa_username'])) {	?>
 <?include  'funciones.php';?>
 <?php
+$fchdesde = $_GET["fchdesde"];
+$fchhasta = $_GET["fchhasta"];
+$buscar = $_GET["buscar"];
+
 if ($print==1){
 
 ?><LINK REL="stylesheet" TYPE="text/css" HREF="estilos.css"><?
@@ -60,14 +64,16 @@ Hasta:<input onMouseOver='scwShow(this,event);' id="id_calendario" value='<?if($
 <?php include ("conexion.php");
 
 
+
 //Consulta acumulativa de valores
 $fchdesde=fch_php_mysql($fchdesde);
 $fchhasta=fch_php_mysql($fchhasta);
 
-if($_SESSION['sipa_admin']!=1)
-$usBuscado="and ped.idusuario=".$_SESSION['sipa_id_username'];
+if($_SESSION['sipa_admin']!=1){
+  $usBuscado="and ped.idusuario=".$_SESSION['sipa_id_username'];
+}
 
- $sql=("SELECT ped.idalimento, ali.nombre, ped.idsecretaria, sec.secretaria, 
+$sql=("SELECT ped.idalimento, ali.nombre, ped.idsecretaria, sec.secretaria, 
 
 sum(ped.cantidad) as cantidad,
 

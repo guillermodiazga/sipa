@@ -85,6 +85,11 @@ Hasta:<input onMouseOver='scwShow(this,event);' id="id_calendario" value='<?if($
 <?php 
 include ("conexion.php");
 
+$fchdesde = $_GET["fchdesde"];
+$fchhasta = $_GET["fchhasta"];
+$user = $_GET["user"];
+$buscar = $_GET["buscar"];
+
 //Consulta acumulativa de valores
 $fchdesde=fch_php_mysql($fchdesde);
 $fchhasta=fch_php_mysql($fchhasta);

@@ -4,7 +4,7 @@
 
 	<tr><td colspan=4  align=center><br></td></tr>
 	<tr><td colspan=4  align=center><br></td></tr>
-	<tr ><td></td><td colspan=1 align=><br><h2><h2></td><td align=right><img src='images/transparencia.png' WIDTH=100 HEIGHT=60></td></tr>
+	<tr ><td></td><td colspan=1 align=><br><h2><h2></td><td align=right><img src='images/logo	.png' WIDTH=100 HEIGHT=60></td></tr>
 
 	<tr><td></td><td colspan=3  align=center><font color=ffffff><font color=grey></font><br></td></tr>
 	<tr><td></td><td></td><td colspan=2 align=left><font color=ffffff><b>Sistema de Pedidos de Alimentaci&oacute;n</font><br></td></tr>
@@ -32,14 +32,14 @@
 
 <?}?>
 <?	
- echo "test".$ingresar;
+
 //if($_POST["ingresar"])
 if($ingresar)
 {
 include 'conexion.php';
 $pass=($_POST["pass"]);
 $user=($_POST["user"]);
- $sql="SELECT * FROM `usuario` WHERE `id`='$user' and `password`='$pass'";
+$sql="SELECT * FROM `usuario` WHERE `id`='$user' and `password`='$pass'";
 $result = mysql_query($sql);
 $row = mysql_num_rows($result);
 

@@ -20,6 +20,11 @@ if ((isset($_SESSION['sipa_username'])) ||(!isset($_SESSION['sipa_username']))){
 
 <?php include ("conexion.php");
 
+$fchdesde = $_GET["fchdesde"];
+$fchhasta = $_GET["fchhasta"];
+$buscar = $_GET["buscar"];
+$estado = $_GET["estado"];
+
 //Obtener fechas
 $hoy=date("d/m/Y");
 

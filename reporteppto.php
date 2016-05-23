@@ -51,6 +51,10 @@ Hasta:<input onMouseOver='scwShow(this,event);' id="id_calendario" value='<?if($
 if (($_SESSION['sipa_admin'])!=1)  
 $secre="and ped.idsecretaria=".$_SESSION["sipa_sec_username"];
 
+$fchdesde = $_GET["fchdesde"];
+$fchhasta = $_GET["fchhasta"];
+$buscar = $_GET["buscar"];
+
 //Consulta acumulativa de valores
 $fchdesde=fch_php_mysql($fchdesde);
 $fchhasta=fch_php_mysql($fchhasta);

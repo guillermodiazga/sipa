@@ -38,15 +38,15 @@ if($hora<10)
 <table width='90%' border=0 bgcolor=red align=center BACKGROUND="images/fondocabeza.png" style="background-repeat:no-repeat">
 <tr>
 	<td>
-		<a href='http://www.tiamima.com/'><IMG SRC="images/transparencia.png" WIDTH=100 HEIGHT=60 border=0></a>
+		<a href='http://www.tiamima.com/'><IMG SRC="images/logo.png" WIDTH=100 HEIGHT=60 border=0></a>
 	<br> <br> <br> <br> 	
 	</td>
 	<td ALIGN=right>
-	<table border=0>
-		<tr><th colspan=2>Contactos:</th></tr>
-		<tr><td>TIA MIMA: </td><td>   4 44 43 63</td></tr>
-		<tr><td>MARTHA LIGIA RAMIREZ ESCOBAR: </td><td>311 306 0161</td></tr>
-		<tr><td>CARLOS ANDRES RODRIGUEZ: </td><td>310 383 50 29</td></tr>
+	<table border=0 >
+		<tr><th colspan=2>Contacto:</th></tr>
+		<tr ><td>Alimentos y Servicios HB: </td><td>   448 69 18</td></tr>
+		<tr style="display:none"><td>MARTHA LIGIA RAMIREZ ESCOBAR: </td><td>311 306 0161</td></tr>
+		<tr style="display:none"><td>CARLOS ANDRES RODRIGUEZ: </td><td>310 383 50 29</td></tr>
 	</table>
 
 	</td>

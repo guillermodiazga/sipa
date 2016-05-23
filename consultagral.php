@@ -14,6 +14,14 @@ if ((isset($_SESSION['sipa_username'])) ||(!isset($_SESSION['sipa_username']))){
 
 <?php include ("conexion.php");
 
+$pedido = $_GET["pedido"];
+$fchdesde = $_GET["fchdesde"];
+$fchhasta = $_GET["fchhasta"];
+$ppto = $_GET["ppto"];
+$secretaria = $_GET["secretaria"];
+$estado = $_GET["estado"];
+$buscar = $_GET["buscar"];
+
 //Obtener fechas
 $hoy=date("d/m/Y");
 $year=date("Y");

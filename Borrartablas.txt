@@ -1,5 +1,5 @@
 DROP TABLE `alimento`;
-DROP TABLE `orico_estados_ped `;
+DROP TABLE `historico_estados_ped `;
 DROP TABLE `pedido `;
 DROP TABLE `persona-ppto `;
 DROP TABLE `presupuesto `;

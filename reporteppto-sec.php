@@ -4,6 +4,10 @@ if (isset($_SESSION['sipa_username'])) {	?>
 <?include  'funciones.php';?>
 <?php include ("cabeza.php"); 
 
+$fchdesde = $_GET["fchdesde"];
+$fchhasta = $_GET["fchhasta"];
+$buscar = $_GET["buscar"];
+
 ?>
 <head>
 
@@ -161,6 +165,6 @@ document.write("<img src='images/cargando.gif'>");
 </body> 
  <script type="text/javascript">
   (function(){
-    $("input[name=buscar]").trigger("click")
+   // $("input[name=buscar]").trigger("click")
   })();
   </script>

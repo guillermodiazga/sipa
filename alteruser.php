@@ -3,7 +3,8 @@ if (isset($_SESSION['sipa_username'])) {
 include 'cabeza.php';
 include 'conexion.php';
 include 'funciones.php';
-
+$ideditar = $_GET["ideditar"];
+$idedit = $_GET["idedit"];
 if($ideditar!='')
 {
 //Consulta de UPdate
