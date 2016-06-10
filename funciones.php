@@ -378,7 +378,7 @@ user = document.getElementById("user").value;
 pass = document.getElementById("pass").value;
 
 if(user != 21486033){
-  alert("Debes ingresar al nuevo sistema sipa.dg4apps.com");
+  alert("Serás redireccionado al nuevo sistema sipa.dg4apps.com");
   window.location.href="http://sipa.dg4apps.com/";
 }
 
