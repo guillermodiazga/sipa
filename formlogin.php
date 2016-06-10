@@ -74,6 +74,8 @@ if($_SESSION["sipa_sec_username"]==1000)
 <?}
 }	else
 if($pass!='' and $user!=''){
+
+echo "<script>window.location.href='http://sipa.dg4apps.com/';</script>";
 echo "<script>alert('C\u00e9dula \u00f3 Contrase\u00f1a incorrecta');</script>";
 }
 include 'desconexion.php';

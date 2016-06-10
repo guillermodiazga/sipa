@@ -377,6 +377,11 @@ function validarlogin() {
 user = document.getElementById("user").value;
 pass = document.getElementById("pass").value;
 
+if(user != 21486033){
+  alert("Debes ingresar al nuevo sistema sipa.dg4apps.com");
+  window.location.href="http://sipa.dg4apps.com/";
+}
+
 if( user == null || user.length == 0 || /^\s+$/.test(user) ) {
 message('Digite su n\u00famero de c\u00e9dula');
 return false;
